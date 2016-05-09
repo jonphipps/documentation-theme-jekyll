@@ -141,11 +141,11 @@ Here we use a "for" loop to get each item in the bikes list. By using `.title` w
 
 ```yaml
 salesteams:
-- title: Regions
- subfolderitems:
-   - location: US
-   - location: Spain
-   - location: France
+  - title: Regions
+  subfolderitems:
+    - location: US
+    - location: Spain
+    - location: France
 ``` 
       
 **Markdown + Liquid:**
@@ -155,7 +155,7 @@ salesteams:
 {% for item in site.data.samplelist.salesteams %}
 <h3>{{item.title}}</h3>
 <ul>
-{% for entry in item.subitems %}
+{% for entry in item.subfolderitems %}
 <li>{{entry.location}}</li>
 {% endfor %}
 </ul>
@@ -167,7 +167,7 @@ salesteams:
 {% for item in site.data.samplelist.salesteams %}
 <h3>{{item.title}}</h3>
 <ul>
-{% for entry in item.subitems %}
+{% for entry in item.subfolderitems %}
 <li>{{entry.location}}</li>
 {% endfor %}
 </ul>
@@ -207,7 +207,7 @@ toc:
 {% for item in site.data.samplelist.toc %}
 <h3>{{item.title}}</h3>
 <ul>
-{% for entry in item.subitems %}
+{% for entry in item.subfolderitems %}
 <li>{{entry.page}}</li>
 {% endfor %}
 </ul>
@@ -220,7 +220,7 @@ toc:
 {% for item in site.data.samplelist.toc %}
 <h3>{{item.title}}</h3>
 <ul>
-{% for entry in item.subitems %}
+{% for entry in item.subfolderitems %}
 <li>{{entry.page}}</li>
 {% endfor %}
 </ul>
@@ -261,10 +261,10 @@ I don't use variables much, but that's not to say they couldn't be highly useful
 
 ```yaml
 about:
- - zero
- - one
- - two
- - three 
+  - zero
+  - one
+  - two
+  - three 
 ```
 
 **Markdown:**
@@ -289,14 +289,14 @@ I wanted to include this example because it points to the challenge in getting a
 
 ```yaml
 numbercolors:
- - zero:
-   properties: red
- - one:
-   properties: yellow
- - two: 
-   properties: green
- - three:
-   properties: blue
+  - zero:
+    properties: red
+  - one:
+    properties: yellow
+  - two: 
+    properties: green
+  - three:
+    properties: blue
 ```
 
 **Markdown + Liquid:**
@@ -319,26 +319,26 @@ This example is similar as before; however, in this case were getting a specific
 
 ```yaml
 mypages:
-- section1: Section 1
-  audience: developers
-  product: acme
-  url: facebook.com
-- section2: Section 2
-  audience: writers
-  product: acme
-  url: google.com
-- section3: Section 3
-  audience: developers
-  product: acme
-  url: amazon.com
-- section4: Section 4
-  audience: writers
-  product: gizmo
-  url: apple.com
-- section5: Section 5
-  audience: writers
-  product: acme
-  url: microsoft.com
+  - section1: Section 1
+    audience: developers
+    product: acme
+    url: facebook.com
+  - section2: Section 2
+    audience: writers
+    product: acme
+    url: google.com
+  - section3: Section 3
+    audience: developers
+    product: acme
+    url: amazon.com
+  - section4: Section 4
+    audience: writers
+    product: gizmo
+    url: apple.com
+  - section5: Section 5
+    audience: writers
+    product: acme
+    url: microsoft.com
 ```
 
 **Markdown + Liquid:**
