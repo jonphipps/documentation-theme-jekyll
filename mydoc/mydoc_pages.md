@@ -40,6 +40,7 @@ summary: "You can insert notes, tips, warnings, and important alerts in your con
 sidebar: mydoc_sidebar
 permalink: /mydoc_alerts/
 ---
+```
 {% endraw %}
 
 Frontmatter is always formatted with three hyphens at the top and bottom. Your frontmatter must have a `title` value. All the other values are optional. If you omit them, the theme won't break.
